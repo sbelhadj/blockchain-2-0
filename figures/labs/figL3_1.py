@@ -1,0 +1,17 @@
+from figlib import *
+F = Fig(9.6, 4.6)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9, weight="bold", owner=own)
+    F.text(x + w / 2, y + (h - 34) / 2, s, size=7.8, owner=own)
+b(20, 330, 240, 90, "amber", "Default admin", "grants and revokes roles;\nhandover: 2 steps + 1-day delay")
+b(20, 175, 240, 125, "amber", "Role holders", "REWARDER: once per event id\nCARRIER_MANAGER: verify carriers\nPAUSER: pause and unpause\nMINTER: treasury mint, up to cap")
+b(380, 150, 240, 230, "green", "SupplyChainToken", "ERC20 + Burnable + Capped\n+ Pausable + Permit\n+ AccessControlDefaultAdminRules\n\ncap 100M, initial 10M to treasury\nrewards 100 / 50 / 200 SCT\n(adjustable, at most 10,000)")
+b(20, 20, 240, 100, "blue", "Verified carriers", "receive rewards;\ntransfer or burn")
+b(720, 280, 220, 100, "blue", "Shippers and partners", "approve + transferFrom,\nor permit (signature)")
+b(720, 60, 220, 100, "grey", "Relayer", "submits permits;\npays the gas")
+F.arrow(260, 375, 380, 340); F.arrow(260, 237, 380, 250); F.arrow(380, 190, 260, 80)
+F.arrow(720, 330, 620, 320); F.arrow(720, 110, 620, 190)
+F.text(500, 432, "governance risk: the admin and MINTER keys; split roles, use a multisig", size=8, color="#A33A3A", style="italic")
+F.crop(5, 445)
+print(F.save("Figure_L3_1.png"))

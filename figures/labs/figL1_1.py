@@ -1,0 +1,16 @@
+from figlib import *
+F = Fig(9.6, 4.2)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9, weight="bold", owner=own)
+    F.text(x + w / 2, y + (h - 34) / 2, s, size=7.8, owner=own)
+b(20, 280, 200, 95, "grey", "Owner (deployer)", "authorizes registrars,\nsets fee, withdraws fees")
+b(20, 150, 200, 95, "blue", "Registrars", "register assets and\npay the registration fee")
+b(20, 20, 200, 95, "blue", "Asset owners", "transfer assets and\nupdate their status")
+b(330, 90, 300, 230, "green", "AssetRegistry", "assets: id, name, industry, status,\nowner, timestamps, metadata URI\n\nowner lists (swap-and-pop)\ntransfer history\nfees held until withdrawn\n\nevents for every change")
+b(740, 220, 200, 100, "amber", "Explorers and auditors", "read events and state;\nno wallet needed")
+b(740, 70, 200, 100, "grey", "Hardhat 3 toolchain", "tests, coverage, Slither,\nIgnition, verification")
+F.arrow(220, 327, 330, 280); F.arrow(220, 197, 330, 205); F.arrow(220, 67, 330, 130)
+F.arrow(630, 250, 740, 270); F.arrow(740, 120, 630, 150)
+F.crop(10, 385)
+print(F.save("Figure_L1_1.png"))

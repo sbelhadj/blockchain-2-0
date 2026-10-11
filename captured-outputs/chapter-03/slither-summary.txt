@@ -1,0 +1,5 @@
+security/VulnerableVault.sol reentrancy-eth
+security/TxOrigin.sol        arbitrary-send-eth, missing-zero-check, tx-origin
+exercises/Lottery.sol        weak-prng
+exercises/TokenSale.sol      locked-ether
+exercises/Airdrop.sol        arbitrary-send-eth, calls-loop

@@ -1,0 +1,15 @@
+from figlib import *
+F = Fig(9.6, 3.8)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9.2, weight="bold", owner=own)
+    F.text(x + w / 2, y + 26, s, size=7.9, owner=own)
+b(20, 210, 230, 95, "blue", "JsonRpcProvider", "read-only, public RPC URL;\nfree view calls, events")
+b(20, 60, 230, 95, "blue", "BrowserProvider", "wraps the wallet's EIP-1193\nprovider from EIP-6963")
+b(330, 60, 220, 95, "amber", "JsonRpcSigner", "provider.getSigner();\nasks the wallet to sign")
+b(650, 210, 280, 95, "green", "Contract (reader)", "address + ABI + provider;\ncalls view functions")
+b(650, 60, 280, 95, "green", "Contract (writer)", "address + ABI + signer;\nsends transactions")
+F.arrow(250, 257, 650, 257); F.arrow(250, 107, 330, 107); F.arrow(550, 107, 650, 107)
+F.text(450, 275, "useConsent(): reader", size=8, color=GREY, style="italic")
+F.crop(45, 320)
+print(F.save("Figure_4_2.png"))

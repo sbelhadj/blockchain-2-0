@@ -1,0 +1,18 @@
+from figlib import *
+F = Fig(9.6, 4.6)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9.2, weight="bold", owner=own)
+    F.text(x + w / 2, y + 26, s, size=7.9, owner=own)
+b(20, 300, 260, 110, "grey", "Patient's browser", "React app; purpose document\nhashed locally with keccak256")
+b(20, 120, 260, 110, "blue", "Wallet", "signs grantConsent and\nrevokeConsent")
+b(380, 300, 230, 110, "amber", "Public RPC (Sepolia)", "reads state and events;\nrelays signed transactions")
+b(700, 300, 240, 110, "green", "PatientConsent", "category code, purpose hash,\nexpiry, active flag, events")
+b(380, 100, 230, 120, "white", "Provider's systems", "medical records,\nconsent documents;\nnever on chain")
+b(700, 100, 240, 120, "blue", "Provider's backend", "hasActiveConsent before\nreading; recordAccess after")
+F.arrow(150, 300, 150, 230); F.arrow(280, 175, 380, 330)
+F.arrow(280, 380, 380, 380); F.arrow(610, 355, 700, 355)
+F.arrow(820, 220, 820, 300); F.arrow(700, 160, 610, 160)
+F.text(495, 60, "only hashes and codes cross into the chain", size=8.2, color=GREY, style="italic")
+F.crop(40, 420)
+print(F.save("Figure_4_5.png"))

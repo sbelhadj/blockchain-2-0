@@ -1,0 +1,23 @@
+from figlib import *
+F = Fig(9.6, 4.6)
+def q(x, y, t, w=230):
+    F.box(x, y, w, 55, color="blue"); F.text(x + w / 2, y + 27, t, size=8.4, owner=(x, y, x + w, y + 55))
+def a(x, y, t, s, col, w=200):
+    F.box(x, y, w, 70, color=col); own = (x, y, x + w, y + 70)
+    F.text(x + w / 2, y + 48, t, size=8.8, weight="bold", owner=own); F.text(x + w / 2, y + 20, s, size=7.6, owner=own)
+q(20, 360, "Must the data stay private\nto known parties?")
+a(20, 230, "Permissioned network", "Book 4; e.g. health\nrecords, trade data", "amber")
+F.arrow(135, 360, 135, 300); F.text(150, 330, "yes", size=8, ha="left")
+q(320, 360, "Is each operation worth more\nthan the L1 fee, or must it\nsettle on L1 directly?")
+F.arrow(250, 387, 320, 387); F.text(285, 400, "no", size=8)
+a(320, 230, "Ethereum L1", "treasury settlement,\nbond registers", "green", 230)
+F.arrow(435, 360, 435, 300); F.text(450, 330, "yes", size=8, ha="left")
+q(650, 360, "Can users wait days to\nwithdraw to L1?", 260)
+F.arrow(550, 387, 650, 387); F.text(600, 400, "no", size=8)
+a(600, 230, "Optimistic rollup", "lowest cost, mature\ntooling; logistics events", "green")
+a(820, 230, "ZK rollup", "fast finality on L1;\nhigher proving cost", "green", 130)
+F.arrow(730, 360, 700, 300); F.text(735, 322, "yes", size=8, ha="left")
+F.arrow(860, 360, 885, 300); F.text(890, 330, "no", size=8, ha="left")
+F.text(480, 190, "then check the candidate's L2BEAT stage, who can upgrade it, and how long withdrawals take", size=8.1, color=GREY, style="italic")
+F.crop(175, 425)
+print(F.save("Figure_6_5.png"))

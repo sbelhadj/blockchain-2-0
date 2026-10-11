@@ -1,0 +1,34 @@
+No contracts to compile
+
+Running Solidity tests
+
+  contracts/solutions/Voting.t.sol:VotingTest
+    ✔ test_VoteRejections()
+    ✔ test_TieGoesToLowerIndexAndLaterLeaderWins()
+    ✔ test_RegistrationEdges()
+    ✔ test_PhaseRules()
+    ✔ test_CandidateCap()
+    ✔ testFuzz_OneVoterAtMostOneVote(address,uint8,uint256) (runs: 256)
+
+  contracts/solutions/Voting.t.sol:VotingInvariantTest
+    ✔ invariant_VotesNeverExceedVoters() (runs: 256)
+
+Running Mocha tests
+
+
+  Voting (Exercise 3.2 solution)
+    ✔ counts votes and names the winner after closing
+    ✔ rejects unregistered, repeat and unknown-candidate votes
+    ✔ blocks every change after closing
+    ✔ refuses the winner while open, and without candidates
+    ✔ restricts administration to the owner
+
+  SecureVault, empty withdrawal
+    ✔ reverts NoBalance when withdrawing nothing
+
+
+  6 passing
+
+
+13 passing (7 solidity, 6 mocha)
+

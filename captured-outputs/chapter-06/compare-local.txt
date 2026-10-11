@@ -1,0 +1,11 @@
+                                             localL1               localOp
+deploy: gas used                             2983608               2983608
+deploy: execution fee (ETH)        0.003304112765625       0.0037610243595
+deploy: L1 gas for data                            0                 98266
+deploy: L1 data fee (ETH)                        0.0                   0.0
+deploy: total (ETH)                0.003304112765625       0.0037610243595
+register: gas used                            246346                246346
+register: execution fee (ETH)   0.000242099309543842   0.00030966299689236
+register: L1 gas for data                          0                  1982
+register: L1 data fee (ETH)                      0.0                   0.0
+register: total (ETH)           0.000242099309543842   0.00030966299689236

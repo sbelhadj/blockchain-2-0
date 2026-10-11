@@ -1,0 +1,3 @@
+file                                    line%  stmt%  uncovered lines
+AssetRegistry.sol                      100.00 100.00  -
+Total                                  100.00 100.00  

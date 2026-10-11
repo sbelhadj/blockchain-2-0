@@ -1,0 +1,2 @@
+Deployment transaction, block 1 of a fresh local node (npx hardhat node)
+Gas used: 1912768

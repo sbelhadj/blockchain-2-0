@@ -1,0 +1,17 @@
+from figlib import *
+F = Fig(9.6, 4.0)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9, weight="bold", owner=own)
+    F.text(x + w / 2, y + 26, s, size=7.8, owner=own)
+b(20, 230, 260, 110, "grey", "contracts/ (Hardhat 3)", "test, compile, export ABI,\nIgnition deploy + provider role")
+b(20, 40, 260, 110, "grey", "frontend/ (Vite + React)", ".env.local: address, chain,\nRPC, deploy block")
+b(370, 230, 230, 110, "green", "PatientConsent", "local node (31337)\nor Sepolia (11155111)")
+b(370, 40, 230, 110, "blue", "Browser + MetaMask", "patient and provider\naccounts")
+b(690, 135, 250, 110, "amber", "Etherscan (Sepolia)", "verified source, events,\nscenario transaction hashes")
+F.arrow(280, 285, 370, 285); F.arrow(150, 230, 150, 150)
+F.arrow(280, 95, 370, 95); F.arrow(485, 150, 485, 230)
+F.arrow(600, 285, 690, 215)
+F.text(325, 300, "deploy", size=8, color=GREY); F.text(165, 190, "ABI", size=8, color=GREY, ha="left")
+F.crop(30, 350)
+print(F.save("Figure_L2_1.png"))

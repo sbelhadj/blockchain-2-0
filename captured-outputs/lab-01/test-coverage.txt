@@ -1,0 +1,75 @@
+No contracts to compile
+
+Running Solidity tests
+
+  contracts/AssetRegistry.t.sol:AssetRegistryTest
+    ✔ test_WithdrawRevertsWhenOwnerRejectsEth()
+    ✔ test_WithdrawPaysOwner()
+    ✔ test_TransferAndHistory()
+    ✔ test_RegistrarRules()
+    ✔ test_PauseStopsChangesNotWithdrawals()
+    ✔ test_OwnershipMovesInTwoSteps()
+    ✔ test_FeeUpdateAndEmptyName()
+    ✔ testFuzz_StatusChangesUntilDecommissioned(uint8) (runs: 256)
+    ✔ testFuzz_RejectsAnyWrongFee(uint256) (runs: 256)
+    ✔ testFuzz_OwnerListsStayConsistent(uint8,uint8) (runs: 256)
+
+  contracts/AssetRegistry.t.sol:AssetRegistryInvariantTest
+    ✔ invariant_OwnerListsPartitionAssets() (runs: 256)
+    ✔ invariant_HistoryEndsAtCurrentOwner() (runs: 256)
+    ✔ invariant_FeesAreAccounted() (runs: 256)
+
+Running Mocha tests
+
+
+  AssetRegistry
+    Deployment
+      ✔ sets the deployer as owner
+      ✔ sets the registration fee
+      ✔ authorizes the deployer as registrar
+    Registration
+      ✔ registers an asset and emits AssetRegistered
+      ✔ rejects a fee below the required amount
+      ✔ rejects a fee above the required amount
+      ✔ rejects an unauthorized caller
+      ✔ rejects an empty name
+      ✔ lets an authorized registrar register
+      ✔ blocks a registrar after revocation
+    Transfer
+      ✔ transfers ownership, records history, updates lists
+      ✔ keeps owner lists consistent when a middle asset leaves
+      ✔ rejects a transfer from a non-owner
+      ✔ rejects the zero address and self-transfer
+      ✔ rejects operations on a missing asset
+      ✔ rejects transferring a decommissioned asset
+    Status
+      ✔ updates status and emits AssetStatusChanged
+      ✔ blocks updates after decommissioning
+      ✔ rejects a status update from a non-owner
+    Fees and admin
+      ✔ lets the owner withdraw collected fees
+      ✔ rejects withdrawal when there are no fees
+      ✔ updates the fee and emits RegistrationFeeUpdated
+      ✔ restricts admin functions to the owner
+
+
+  23 passing
+
+
+36 passing (13 solidity, 23 mocha)
+
+Saved html report to /home/claude/blockchain-2-0/lab-01-asset-registry/coverage/html
+╔══════════════════════════════════════════════════════════════════════╗
+║                           Coverage Report                            ║
+╚══════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════╗
+║ File Coverage                                                        ║
+╟─────────────────────────────┬────────┬─────────────┬─────────────────╢
+║ File Path                   │ Line % │ Statement % │ Uncovered Lines ║
+╟─────────────────────────────┼────────┼─────────────┼─────────────────╢
+║ contracts/AssetRegistry.sol │ 100.00 │ 100.00      │ -               ║
+╟─────────────────────────────┼────────┼─────────────┼─────────────────╢
+║ Total                       │ 100.00 │ 100.00      │                 ║
+╚═════════════════════════════╧════════╧═════════════╧═════════════════╝
+
+

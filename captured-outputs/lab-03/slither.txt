@@ -1,0 +1,1 @@
+INFO:Slither:contracts/SupplyChainToken.sol analyzed (34 contracts with 102 detectors), 0 result(s) found

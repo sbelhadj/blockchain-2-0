@@ -1,0 +1,3 @@
+contracts/security/SecureVault.sol 100.00 100.00
+contracts/solutions/Voting.sol 100.00 100.00
+Total 90.61 90.22

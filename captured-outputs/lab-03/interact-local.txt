@@ -1,0 +1,8 @@
+token           0x5FbDB2315678afecb367f032d93F642f64180aa3
+owner balance   9999710.0 SCT
+recipient bal.  290.0 SCT
+allowance       500.0 SCT
+transfer        0xe15f4274eda444db8f017b3783036e0292da8ee607835a42493d297a689453ef
+approve         0x422df327dc097bf9cc966ebae2d84b5ea2543d6cf71f58b135cbb14f7bf727e7
+transferFrom    0xebab33ddfc4ff142ef4698cda5e372ba20a4c8c7989b23daefe61eae739409c9
+permit          0xa44dcac86b223cacd4dda6f274e497c6669a8d16e42ca2fd4df1ccee2011beb3

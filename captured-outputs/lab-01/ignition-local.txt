@@ -1,0 +1,8 @@
+Hardhat Ignition starting for [ AssetRegistryModule ]...Hardhat Ignition
+Deploying [ AssetRegistryModule ]
+Batch #1
+  Executing AssetRegistryModule#AssetRegistry...
+  Executed AssetRegistryModule#AssetRegistry
+[ AssetRegistryModule ] successfully deployed
+Deployed Addresses
+AssetRegistryModule#AssetRegistry - 0x5FbDB2315678afecb367f032d93F642f64180aa3

@@ -1,0 +1,16 @@
+from figlib import *
+F = Fig(9.6, 4.6)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9.2, weight="bold", owner=own)
+    F.text(x + w / 2, y + 26, s, size=7.9, owner=own)
+b(360, 170, 260, 130, "green", "LendingPool", "collateral, debt, supplied;\nhealth factor from oracle price")
+b(20, 330, 230, 90, "blue", "Lender", "supply(tUSD)")
+b(20, 170, 230, 90, "blue", "Borrower (Bob)", "depositCollateral(WETH)\nborrow / repay tUSD")
+b(20, 15, 230, 90, "amber", "Liquidator", "repays up to 50% of debt,\nreceives collateral + 5%")
+b(730, 330, 220, 90, "grey", "Price feed", "USD per WETH, 8 decimals;\nrejected if older than 1 h")
+b(730, 120, 220, 130, "red", "Liquidation trigger", "health factor =\ncollateral x 80% / debt\nliquidatable below 1.0")
+F.arrow(250, 375, 380, 300); F.arrow(250, 215, 360, 235); F.arrow(250, 60, 380, 170)
+F.arrow(730, 375, 600, 300); F.arrow(620, 225, 730, 200)
+F.crop(5, 430)
+print(F.save("Figure_5_2.png"))

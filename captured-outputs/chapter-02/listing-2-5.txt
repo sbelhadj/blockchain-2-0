@@ -1,0 +1,12 @@
+BatchExecutor      0x5FbDB2315678afecb367f032d93F642f64180aa3
+alice code before  0x
+set-code tx type   4
+set-code gasUsed   36844
+alice code after   0xef01005fbdb2315678afecb367f032d93f642f64180aa3
+batch gasUsed      49165
+bob received       0.1 ETH
+carol received     0.2 ETH
+alice code cleared 0x
+alice              0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+set-code tx hash   0x0ae91eac37286e802a44e63e8d3dad0e5e7dbfac58943902f0d176e46ba3c5dd
+batch tx hash      0xc4047cbf448e96f0f79f9f145240a1b9cfad2e92f323bae4197790b8081a9124

@@ -1,0 +1,18 @@
+Swaps into a pool of 100 WETH / 300,000 tUSD
+ WETH in     tUSD out  avg price  below spot
+       1     2,961.47   2,961.47       1.28%
+       5    14,244.89   2,848.98       5.03%
+      10    27,198.33   2,719.83       9.34%
+      25    59,855.91   2,394.24      20.19%
+
+Impermanent loss (fees not included)
+price ratio     loss
+      0.25x  -20.00%
+      0.50x   -5.72%
+      0.80x   -0.62%
+      1.00x    0.00%
+      1.25x   -0.62%
+      1.50x   -2.02%
+      2.00x   -5.72%
+      3.00x  -13.40%
+      5.00x  -25.46%

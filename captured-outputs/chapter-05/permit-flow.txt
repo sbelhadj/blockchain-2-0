@@ -1,0 +1,4 @@
+permit submitted by relayer, gas 76869
+allowance now 250.0 tUSD
+alice's permit nonce 1
+replaying the same signature: ERC2612InvalidSigner

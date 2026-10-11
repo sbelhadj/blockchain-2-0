@@ -1,0 +1,8 @@
+:root { font-family: system-ui, sans-serif; color: #1a1a1a; background: #fff; }
+main { max-width: 860px; margin: 2rem auto; padding: 0 1rem; }
+section { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+input, select, button { margin: 0.25rem; padding: 0.4rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+td { border-top: 1px solid #eee; padding: 0.3rem; }
+.tx.info { color: #2e5c8a; } .tx.ok { color: #4e7d3a; }
+.tx.warn { color: #a66a00; } .tx.error { color: #a33a3a; }

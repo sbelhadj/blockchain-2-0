@@ -1,0 +1,11 @@
+type               2
+gasLimit           51469
+gasUsed            49165
+maxFeePerGas       2.533820474 gwei
+maxPriorityFee     1.0 gwei
+block baseFee      0.671164191 gwei
+effective price    1.671164191 gwei
+total fee          0.000082162787450515 ETH
+  burned           0.000032997787450515 ETH
+  to proposer      0.000049165 ETH
+receipt.fee check  true

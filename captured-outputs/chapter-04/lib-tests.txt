@@ -1,0 +1,14 @@
+✔ txReducer follows the happy path and ignores invalid moves (2.179341ms)
+✔ txReducer distinguishes rejection from revert (0.236749ms)
+  decoded: NotProvider(0xd48CB74bc45ca46646b9F0e8a9310Db6D4Cc412E)
+✔ explainError decodes the contract's custom error (272.104724ms)
+  blocks 3-15: 12 events, 12 with halving
+✔ queryPaged returns every event and survives range limits (1791.952832ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2958.282051

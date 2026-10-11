@@ -1,0 +1,79 @@
+No contracts to compile
+
+Running Solidity tests
+
+  contracts/solutions/LendingPoolWithInterest.t.sol:LendingPoolWithInterestTest
+    ✔ test_ZeroAmountsRevert()
+    ✔ test_UnhealthyWithdrawalAndLiquidation()
+    ✔ test_RateModelAndEmptyPool()
+    ✔ test_PauseStopsNewRiskOnly()
+    ✔ test_OracleChecks()
+    ✔ test_LenderWithdrawals()
+    ✔ test_ConstructorChecks()
+    ✔ test_BorrowerCycleWithInterest()
+    ✔ testFuzz_MaxBorrowHealthyAndDebtCovered(uint96,uint32) (runs: 256)
+    ✔ testFuzz_FullWithdrawalClearsBalance(uint64,uint32) (runs: 256)
+
+  contracts/amm/SimpleAMM.t.sol:SimpleAMMTest
+    ✔ test_TinyFirstDepositIsRejected()
+    ✔ test_SwapRejections()
+    ✔ test_SwapBothWays()
+    ✔ test_PauseStopsTradingNotWithdrawals()
+    ✔ test_FirstDepositLocksMinimumLiquidity()
+    ✔ test_ConstructorChecks()
+    ✔ test_AddAndRemoveLiquidity()
+    ✔ testFuzz_SwapNeverLowersK(uint96,bool) (runs: 256)
+
+  contracts/lending/LendingPool.t.sol:LendingPoolTest
+    ✔ test_ZeroAmountsRevert()
+    ✔ test_UnhealthyWithdrawalIsBlocked()
+    ✔ test_SeizureIsCappedAtCollateral()
+    ✔ test_PauseStopsNewRiskOnly()
+    ✔ test_OracleChecks()
+    ✔ test_LiquidationAfterPriceDrop()
+    ✔ test_LenderWithdrawsOnlyIdleCash()
+    ✔ test_ConstructorChecks()
+    ✔ test_BorrowRepayWithdrawCycle()
+    ✔ testFuzz_MaxBorrowStaysHealthy(uint96,uint64) (runs: 256)
+
+  contracts/lending/LendingPool.t.sol:LendingPoolInvariantTest
+    ✔ invariant_CollateralIsBacked() (runs: 256)
+    ✔ invariant_CashPlusDebtEqualsSupply() (runs: 256)
+
+Running Mocha tests
+
+
+  SimpleAMM
+      1 WETH -> 2961.474103 tUSD
+    ✔ pays out according to x * y = k with a 0.3% fee
+    ✔ never lets k decrease
+    ✔ reverts when the output falls below the trader's minimum
+
+  LendingPool
+      health factor after borrowing 5,000: 1.2
+    ✔ lets Bob borrow up to 75% of his collateral value
+    ✔ refuses to liquidate a healthy position
+      health factor before: 0.96
+      liquidator repaid 2,500 tUSD, received 1.3125 WETH
+      health factor after:  1.08
+    ✔ liquidates after a price drop (5% bonus, 50% close factor)
+    ✔ rejects a stale oracle price
+    ✔ blocks withdrawals that would make the position unhealthy
+
+  LendingPoolWithInterest (Exercise 5.4 solution)
+    ✔ rate model: 2% at 0, 7% at 50%, 10% at 80%, 60% at 100%
+      debt after 1 year:     5350.0 tUSD
+      lender after 1 year:   10350.0 tUSD
+    ✔ charges 7% a year at 50% utilization and pays the lender
+    ✔ lets a lender withdraw only what is not lent out
+      health factor after 90 days: 0.96147593139656551
+    ✔ makes a position liquidatable through interest alone
+    ✔ does not liquidate at exactly 1.0, does just below
+    ✔ clears the debt exactly on full repayment
+
+
+  14 passing
+
+
+44 passing (30 solidity, 14 mocha)
+

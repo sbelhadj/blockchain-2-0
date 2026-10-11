@@ -1,0 +1,47 @@
+
+Compiled 2 Solidity files with solc 0.8.34 (evm target: osaka)
+
+Running Solidity tests
+
+  contracts/SupplyChainToken.t.sol:SupplyChainTokenTest
+    ✔ test_ZeroAddressesRejected()
+    ✔ test_RewardNeedsVerifiedCarrier()
+    ✔ test_PauseStopsTransfersUntilUnpaused()
+    ✔ testFuzz_SupplyNeverExceedsCap(uint256,uint256) (runs: 256)
+    ✔ testFuzz_RewardAmountBounded(uint256) (runs: 256)
+    ✔ testFuzz_EventRewardedOnce(bytes32,uint8) (runs: 256)
+
+  contracts/SupplyChainToken.t.sol:SupplyChainTokenInvariantTest
+    ✔ invariant_SupplyWithinCap() (runs: 256)
+    ✔ invariant_DeliveryCountMatchesRewards() (runs: 256)
+    ✔ invariant_BalancesAddUpToSupply() (runs: 256)
+
+Running Mocha tests
+
+
+  SupplyChainToken
+    deployment
+      ✔ mints 10 million SCT to the treasury, cap 100 million
+      ✔ rejects a zero treasury and a zero carrier
+    rewards
+      ✔ rewards a verified carrier once per event
+      ✔ refuses unverified and unverified-again carriers
+      ✔ lets the admin change a reward within MAX_REWARD
+    access control
+      ✔ rejects privileged calls from accounts without the role
+      ✔ lets a dedicated rewarder reward but not mint or pause
+      ✔ hands over the admin role only after the delay
+    supply and transfers
+      ✔ enforces the cap on treasury mints
+      ✔ supports approve, transferFrom and burning
+      ✔ blocks transfers and rewards while paused
+    permit
+      ✔ accepts a valid permit once, submitted by a relayer
+      ✔ rejects an expired permit
+
+
+  13 passing
+
+
+22 passing (9 solidity, 13 mocha)
+

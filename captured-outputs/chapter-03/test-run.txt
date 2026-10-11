@@ -1,0 +1,139 @@
+No contracts to compile
+
+Running Solidity tests
+
+  contracts/security/Security.t.sol:SecurityTest
+    ✔ test_SecureVaultStopsReentrancy()
+    ✔ test_SecureVaultDepositAndWithdraw()
+    ✔ test_RoleMintToken()
+    ✔ test_PushPayoutFailsForEveryoneWhenOneRejects()
+    ✔ test_PullPayoutWithdrawals()
+    ✔ test_PullPayoutFundingAndBatch()
+    ✔ testFuzz_PullPayoutKeepsBooksBalanced(uint8,uint64) (runs: 256)
+
+  contracts/basics/SimpleStorage.t.sol:SimpleStorageTest
+    ✔ test_V2IncrementCountsWrites()
+    ✔ testFuzz_SetThenGet(uint256,uint256) (runs: 256)
+
+  contracts/solutions/Solutions.t.sol:SolutionsTest
+    ✔ test_TokenSalePriceCap()
+    ✔ test_TokenSaleOwnerThatRefusesEther()
+    ✔ test_TokenSaleEdges()
+    ✔ test_ShipmentRecorded()
+    ✔ test_LotteryTicketRulesAndLimits()
+    ✔ test_LotteryFullRound()
+    ✔ test_LotteryDrawExpiresAndRefusingWinner()
+    ✔ test_AirdropEdges()
+    ✔ testFuzz_AirdropNeverPromisesMoreThanItHolds(uint96,uint96,uint8) (runs: 256)
+
+  contracts/solutions/Voting.t.sol:VotingInvariantTest
+    ✔ invariant_VotesNeverExceedVoters() (runs: 256)
+
+  contracts/solutions/Voting.t.sol:VotingTest
+    ✔ test_VoteRejections()
+    ✔ test_TieGoesToLowerIndexAndLaterLeaderWins()
+    ✔ test_RegistrationEdges()
+    ✔ test_PhaseRules()
+    ✔ test_CandidateCap()
+    ✔ testFuzz_OneVoterAtMostOneVote(address,uint8,uint256) (runs: 256)
+
+  contracts/gas/Gas.t.sol:GasExamplesTest
+    ✔ testFuzz_LayoutsStoreTheSameData(uint256,uint256,bool) (runs: 256)
+    ✔ testFuzz_DebitsAgree(uint96,uint96) (runs: 256)
+
+  contracts/patterns/Patterns.t.sol:PatternsTest
+    ✔ test_UpgradeKeepsState()
+    ✔ test_OnlyOwnerUpgradesAndWithdraws()
+    ✔ test_ImplementationCannotBeInitialized()
+    ✔ test_HubRejectsBadPaymentsAndEmptyWithdrawals()
+    ✔ test_HubPauseBlocksPaymentsNotWithdrawals()
+    ✔ test_FactoryMakesCallerTheBuyer()
+
+  contracts/basics/Escrow.t.sol:EscrowTest
+    ✔ test_WrongStateIsRejected()
+    ✔ test_StrangerCannotRefund()
+    ✔ test_OnlyBuyerPays()
+    ✔ test_NothingOwedAndFailedPayment()
+    ✔ test_HappyPathSellerWithdraws()
+    ✔ test_ConstructorRejectsBadParties()
+    ✔ test_BuyerReclaimsOnlyAfterDeadline()
+    ✔ test_AgentRefundsAnyTime()
+    ✔ testFuzz_PayRejectsAnyOtherAmount(uint256) (runs: 256)
+    ✔ testFuzz_OnlyAgentConfirms(address) (runs: 256)
+
+  contracts/basics/Escrow.t.sol:EscrowInvariantTest
+    ✔ invariant_BalanceMatchesObligations() (runs: 256)
+
+Running Mocha tests
+
+
+  Escrow
+    ✔ moves through the happy path; the seller withdraws
+    ✔ rejects the wrong amount
+    ✔ rejects callers without the right role
+    ✔ rejects steps taken in the wrong state
+    ✔ lets the agent cancel, and the buyer withdraws
+    ✔ lets the buyer reclaim only after the deadline
+    ✔ cannot be blocked by a seller that rejects ether
+
+  Exercise 3.3, Lottery
+    ✔ A1: anyone can pick the winner, at a moment they choose
+    ✔ A2: the outcome is predictable from the block timestamp
+    ✔ A3: a contract winner blocks the transfer payout
+    ✔ fixed: no early draw; the winner claims the prize
+
+  Exercise 3.3, TokenSale
+    ✔ B1: anyone can set the price to zero and buy for free
+    ✔ B2: ether paid in can never leave the contract
+    ✔ fixed: price is owner-only, buyers cap it, owner withdraws
+
+  Exercise 3.3, Airdrop
+    ✔ C1: anyone can send the contract's ether to themselves
+    ✔ C2: one rejecting recipient blocks the whole distribution
+    ✔ fixed: owner-only, accumulating shares, pull claims
+
+  Factory
+    ✔ deploys and registers one escrow per deal
+
+  Pausable
+    ✔ stops payments while paused, never withdrawals
+
+  UUPS proxy
+    ✔ keeps state and address across an upgrade
+    ✔ allows only the owner to upgrade
+    ✔ cannot initialize the implementation directly
+
+  Reentrancy
+      vault left:     0.0 ETH
+      attacker holds: 11.0 ETH
+      re-entries:     10
+    ✔ drains VulnerableVault with a 1 ETH deposit
+    ✔ blocks the same attack on SecureVault
+
+  Access control
+    ✔ lets anyone mint on OpenMintToken
+    ✔ requires MINTER_ROLE on RoleMintToken
+
+  tx.origin
+    ✔ lets a phishing contract empty TxOriginWallet
+
+  Push versus pull payments
+    ✔ one rejecting recipient blocks every push payout
+    ✔ pull payouts let honest recipients withdraw
+
+  Voting (Exercise 3.2 solution)
+    ✔ counts votes and names the winner after closing
+    ✔ rejects unregistered, repeat and unknown-candidate votes
+    ✔ blocks every change after closing
+    ✔ refuses the winner while open, and without candidates
+    ✔ restricts administration to the owner
+
+  SecureVault, empty withdrawal
+    ✔ reverts NoBalance when withdrawing nothing
+
+
+  35 passing
+
+
+79 passing (44 solidity, 35 mocha)
+

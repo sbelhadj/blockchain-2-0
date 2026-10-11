@@ -1,0 +1,10 @@
+impact        detector                  found in      count
+Medium        incorrect-equality        ours          1
+Low           missing-zero-check        OpenZeppelin  1
+Low           timestamp                 ours          1
+Informational assembly                  OpenZeppelin  9
+Informational pragma                    ours          1
+Informational dead-code                 OpenZeppelin  2
+Informational solc-version              OpenZeppelin  1
+Informational low-level-calls           ours          1
+Informational unindexed-event-address   OpenZeppelin  2

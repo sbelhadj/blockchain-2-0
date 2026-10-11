@@ -1,0 +1,4 @@
+A: deploy + pay bob            success true, gas used 302498
+A again: pay carol             success true, gas used 128007
+B: deploy + batch (bob, carol) success true, gas used 311744
+C: verificationGasLimit 50,000 reverted FailedOp(0, AA13 initCode failed or OOG)

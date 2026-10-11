@@ -1,0 +1,17 @@
+You are running Hardhat Ignition against an in-process instance of Hardhat Network.
+This will execute the deployment, but the results will be lost.
+You can use --network <network-name> to deploy to a different network.
+Hardhat Ignition starting for [ PatientConsentModule ]...Hardhat Ignition
+Deploying [ PatientConsentModule ]
+Batch #1
+  Executing PatientConsentModule#PatientConsent...
+  Executed PatientConsentModule#PatientConsent
+Batch #2
+  Executing PatientConsentModule#PatientConsent.PROVIDER_ROLE...
+  Executed PatientConsentModule#PatientConsent.PROVIDER_ROLE
+Batch #3
+  Executing PatientConsentModule#PatientConsent.grantRole...
+  Executed PatientConsentModule#PatientConsent.grantRole
+[ PatientConsentModule ] successfully deployed
+Deployed Addresses
+PatientConsentModule#PatientConsent - 0x5FbDB2315678afecb367f032d93F642f64180aa3

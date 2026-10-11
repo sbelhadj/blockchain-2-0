@@ -1,0 +1,18 @@
+{
+  "network": "localL1",
+  "chainId": "31337",
+  "deploy": {
+    "gasUsed": "2983608",
+    "executionFeeWei": "3304112765625000",
+    "l1GasUsed": "0",
+    "l1DataFeeWei": "0",
+    "totalWei": "3304112765625000"
+  },
+  "register": {
+    "gasUsed": "246346",
+    "executionFeeWei": "242099309543842",
+    "l1GasUsed": "0",
+    "l1DataFeeWei": "0",
+    "totalWei": "242099309543842"
+  }
+}

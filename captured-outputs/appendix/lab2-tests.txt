@@ -1,0 +1,46 @@
+No contracts to compile
+
+Running Solidity tests
+
+  contracts/PatientConsent.t.sol:PatientConsentTest
+    ✔ test_SuspendedProviderLosesConsent()
+    ✔ test_RevokeRules()
+    ✔ test_ReplacementRevokesTheEarlierConsent()
+    ✔ test_RecordAccessNeedsConsentAndRole()
+    ✔ test_PauseNeverBlocksRevocation()
+    ✔ test_GrantChecks()
+    ✔ test_AdminMovesInTwoStepsWithDelay()
+    ✔ testFuzz_UnrelatedPairsNeverPass(address,address,bytes32) (runs: 256)
+    ✔ testFuzz_RejectsBadDurations(uint32) (runs: 256)
+    ✔ testFuzz_ConsentLastsExactlyItsDuration(uint32) (runs: 256)
+
+  contracts/PatientConsent.t.sol:PatientConsentInvariantTest
+    ✔ invariant_OneActiveConsentPerPair() (runs: 256)
+    ✔ invariant_NoAccessWithoutConsent() (runs: 256)
+    ✔ invariant_IdsAreDense() (runs: 256)
+
+Running Mocha tests
+
+
+  PatientConsent, Lab 2 additions
+    ✔ a 1-day consent is inactive after 1 day and 1 second
+    ✔ a provider whose role is revoked cannot record access
+
+  PatientConsent
+    ✔ grants consent and emits the event
+    ✔ refuses unregistered providers, self-consent and bad durations
+    ✔ expires after the chosen number of days
+    ✔ lets only the patient revoke, once
+    ✔ replaces an earlier consent and records the replacement as a revocation
+    ✔ allows recordAccess only with active consent
+
+  PatientConsentDraft (earlier version)
+      draft hasActiveConsent for a stranger pair: true
+    ✔ reports consent for a pair that never granted any
+
+
+  9 passing
+
+
+22 passing (13 solidity, 9 mocha)
+

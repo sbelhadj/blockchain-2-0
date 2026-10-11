@@ -1,0 +1,5 @@
+round       1
+price       2500.0 USD
+decimals    8
+updated     0 seconds before the latest block
+usable      yes

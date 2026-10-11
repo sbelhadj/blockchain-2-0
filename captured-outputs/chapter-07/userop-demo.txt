@@ -1,0 +1,7 @@
+smart account       0x72ADEF72d0A242FF1CA2FAf614c4D88BA8C09118
+code before         0x
+AccountDeployed     0x72ADEF72d0A242FF1CA2FAf614c4D88BA8C09118
+UserOperationEvent  success: true  gas cost: 0.000469707071490756 ETH
+code after          141 bytes (a proxy)
+bob received        0.1 ETH
+owner's ETH         0.0

@@ -1,0 +1,17 @@
+from figlib import *
+F = Fig(9.6, 4.4)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9.2, weight="bold", owner=own)
+    F.text(x + w / 2, y + 26, s, size=7.9, owner=own)
+F.text(225, 425, "Dec 2020 to Sep 2022: two chains", size=10.5, weight="bold")
+F.text(705, 425, "Since 15 Sep 2022: one chain, two clients", size=10.5, weight="bold")
+F.line(460, 20, 460, 440, color="#BFBFBF", lw=0.8, ls="--")
+b(20, 260, 410, 120, "grey", "Ethereum mainnet (proof of work)", "miners order blocks; EVM executes\nall transactions and holds all state")
+b(20, 70, 410, 120, "blue", "Beacon Chain (proof of stake)", "validators stake and vote on empty\nbeacon blocks; no user transactions")
+b(500, 260, 420, 120, "blue", "Consensus layer (Beacon Chain)", "validators propose and attest;\nslots, epochs, finality")
+b(500, 70, 420, 120, "green", "Execution layer (former mainnet)", "EVM, state, mempool, JSON-RPC;\nsame accounts, contracts and history")
+F.arrow(710, 260, 710, 190); F.text(790, 225, "Engine API", size=8.2, color=GREY)
+F.text(225, 40, "the Merge joined the two at the terminal total difficulty", size=8, color=GREY, style="italic")
+F.crop(25, 440)
+print(F.save("Figure_6_1.png"))

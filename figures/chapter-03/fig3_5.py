@@ -1,0 +1,17 @@
+from figlib import *
+F = Fig(9.6, 4.2)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 24, t, size=9.4, weight="bold", owner=own)
+    F.text(x + w / 2, y + (h - 36) / 2, s, size=8.1, owner=own)
+b(20, 170, 170, 90, "grey", "User", "calls pay() on the\nproxy's address")
+b(260, 100, 270, 230, "blue", "HubProxy (ERC-1967)", "storage lives here:\ntotalPayments, owner,\nimplementation slot\n\nfallback: delegatecall")
+b(640, 260, 280, 85, "green", "PaymentHubV1", "code only; constructor\ndisables initializers")
+b(640, 85, 280, 85, "green", "PaymentHubV2", "same slots + paymentCount\n(appended, never reordered)")
+F.arrow(190, 215, 260, 215)
+F.arrow(530, 260, 640, 300)
+F.line(530, 170, 600, 130, ls="--"); F.arrow(600, 130, 640, 128)
+F.text(585, 330, "before upgrade", size=8, color=GREY, style="italic")
+F.text(585, 66, "after upgradeToAndCall (owner only)", size=8, color=GREY, style="italic")
+F.crop(50, 360)
+print(F.save("Figure_3_5.png"))

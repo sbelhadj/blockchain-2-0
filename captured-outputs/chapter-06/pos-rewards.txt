@@ -1,0 +1,13 @@
+total staked: 34,000,000 ETH
+epochs per year: 82,181
+participation  reward / year     APR
+         100%     0.9125 ETH   2.85%
+          95%     0.8669 ETH   2.71%
+          80%     0.7300 ETH   2.28%
+
+    ETH staked  APR at 100%
+    10,000,000        5.26%
+    20,000,000        3.71%
+    34,000,000        2.85%
+    50,000,000        2.35%
+    80,000,000        1.86%

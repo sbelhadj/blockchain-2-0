@@ -1,0 +1,36 @@
+No contracts to compile
+
+Running Solidity tests
+
+  contracts/solutions/LendingPoolWithInterest.t.sol:LendingPoolWithInterestTest
+    ✔ test_ZeroAmountsRevert()
+    ✔ test_UnhealthyWithdrawalAndLiquidation()
+    ✔ test_RateModelAndEmptyPool()
+    ✔ test_PauseStopsNewRiskOnly()
+    ✔ test_OracleChecks()
+    ✔ test_LenderWithdrawals()
+    ✔ test_ConstructorChecks()
+    ✔ test_BorrowerCycleWithInterest()
+    ✔ testFuzz_MaxBorrowHealthyAndDebtCovered(uint96,uint32) (runs: 256)
+    ✔ testFuzz_FullWithdrawalClearsBalance(uint64,uint32) (runs: 256)
+
+Running Mocha tests
+
+
+  LendingPoolWithInterest (Exercise 5.4 solution)
+    ✔ rate model: 2% at 0, 7% at 50%, 10% at 80%, 60% at 100%
+      debt after 1 year:     5350.0 tUSD
+      lender after 1 year:   10350.0 tUSD
+    ✔ charges 7% a year at 50% utilization and pays the lender
+    ✔ lets a lender withdraw only what is not lent out
+      health factor after 90 days: 0.96147593139656551
+    ✔ makes a position liquidatable through interest alone
+    ✔ does not liquidate at exactly 1.0, does just below
+    ✔ clears the debt exactly on full repayment
+
+
+  6 passing
+
+
+16 passing (10 solidity, 6 mocha)
+

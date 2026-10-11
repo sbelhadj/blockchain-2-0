@@ -1,0 +1,18 @@
+== function selector
+771602f7: add(uint256,uint256)
+== first 40 bytes of the runtime bytecode
+608060405234801561000f575f5ffd5b5060043610610029575f3560e01c8063771602f71461002d
+== dispatcher (assembly excerpt)
+      pop
+      jumpi(tag_2, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0x771602f7
+      eq
+      tag_3
+      jumpi
+    tag_2:
+      revert(0x00, 0x00)
+== overflow check: Panic(uint256) selector and code 0x11
+      0x4e487b71...
+      0x11

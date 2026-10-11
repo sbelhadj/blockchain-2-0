@@ -1,0 +1,4 @@
+start                              alice   1000.0  pool      0.0  allowance      0.0
+1. alice approves 250 (gas 46927)  alice   1000.0  pool      0.0  allowance    250.0
+2. pool pulls 100 (gas 58401)      alice    900.0  pool    100.0  allowance    150.0
+3. pool pulls 200: reverted with ERC20InsufficientAllowance

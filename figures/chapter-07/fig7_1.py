@@ -1,0 +1,18 @@
+from figlib import *
+F = Fig(9.6, 4.4)
+def b(x, y, w, h, col, t, s):
+    F.box(x, y, w, h, color=col); own = (x, y, x + w, y + h)
+    F.text(x + w / 2, y + h - 22, t, size=9, weight="bold", owner=own)
+    F.text(x + w / 2, y + 26, s, size=7.8, owner=own)
+b(15, 300, 190, 100, "grey", "Owner's key", "signs the UserOperation\nhash; holds no ETH needed")
+b(260, 300, 190, 100, "blue", "Bundler", "collects UserOps from an\nalternative mempool")
+b(505, 300, 200, 100, "green", "EntryPoint (v0.8)", "handleOps: validate all,\nthen execute all")
+b(760, 300, 180, 100, "amber", "Paymaster (optional)", "agrees to pay gas,\ne.g. in a stablecoin")
+b(505, 110, 200, 100, "green", "Smart account", "validateUserOp checks the\nsignature; execute runs the call")
+b(760, 110, 180, 100, "grey", "Target", "e.g. bob, a token,\nany contract")
+F.arrow(205, 350, 260, 350); F.arrow(450, 350, 505, 350)
+F.arrow(705, 350, 760, 350); F.arrow(600, 300, 600, 210); F.arrow(705, 160, 760, 160)
+F.line(505, 140, 355, 140); F.arrow(355, 140, 355, 300)
+F.text(430, 125, "gas refund to the bundler", size=8, color=GREY, style="italic")
+F.crop(95, 410)
+print(F.save("Figure_7_1.png"))

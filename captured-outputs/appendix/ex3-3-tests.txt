@@ -1,0 +1,25 @@
+No contracts to compile
+
+Running Mocha tests
+
+
+  Exercise 3.3, Lottery
+    ✔ A1: anyone can pick the winner, at a moment they choose
+    ✔ A2: the outcome is predictable from the block timestamp
+    ✔ A3: a contract winner blocks the transfer payout
+    ✔ fixed: no early draw; the winner claims the prize
+
+  Exercise 3.3, TokenSale
+    ✔ B1: anyone can set the price to zero and buy for free
+    ✔ B2: ether paid in can never leave the contract
+    ✔ fixed: price is owner-only, buyers cap it, owner withdraws
+
+  Exercise 3.3, Airdrop
+    ✔ C1: anyone can send the contract's ether to themselves
+    ✔ C2: one rejecting recipient blocks the whole distribution
+    ✔ fixed: owner-only, accumulating shares, pull claims
+
+
+  10 passing
+
+

@@ -1,0 +1,12 @@
+
+You are running Hardhat Ignition against an in-process instance of Hardhat Network.
+This will execute the deployment, but the results will be lost.
+You can use --network <network-name> to deploy to a different network.
+Hardhat Ignition starting for [ SupplyChainTokenModule ]...Hardhat Ignition
+Deploying [ SupplyChainTokenModule ]
+Batch #1
+  Executing SupplyChainTokenModule#SupplyChainToken...
+  Executed SupplyChainTokenModule#SupplyChainToken
+[ SupplyChainTokenModule ] successfully deployed
+Deployed Addresses
+SupplyChainTokenModule#SupplyChainToken - 0x5FbDB2315678afecb367f032d93F642f64180aa3

@@ -1,0 +1,9 @@
+Account   0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+  balance  9999699917837212549485 wei (9999.699917837212549485 ETH)
+  nonce    4
+  code     23 bytes
+  codeHash 0x563a7b193f6edfdfc9c3bbbce7e7856d71459924ec913daa4e00bb98409a78c8
+Latest block 7
+  gasLimit 60000000
+  gasUsed  36844
+  baseFee  0.394577437 gwei

@@ -1,0 +1,25 @@
+file                                    line%  stmt%  uncovered lines
+basics/Escrow.sol                      100.00 100.00  -
+basics/SimpleStorage.sol               100.00 100.00  -
+exercises/Airdrop.sol                  100.00 100.00  -
+exercises/Lottery.sol                  100.00 100.00  -
+exercises/ShipmentTracker.sol          100.00 100.00  -
+exercises/TokenSale.sol                100.00 100.00  -
+gas/BalanceBook.sol                    100.00 100.00  -
+gas/ShipmentLogs.sol                   100.00 100.00  -
+security/Attacker.sol                  100.00 100.00  -
+security/Payouts.sol                   100.00 100.00  -
+security/SecureVault.sol               100.00 100.00  -
+security/TxOrigin.sol                  100.00 100.00  -
+security/VulnerableVault.sol           100.00 100.00  -
+solutions/LotteryFixed.sol             100.00 100.00  -
+solutions/ShipmentTrackerOptimized.sol 100.00 100.00  -
+solutions/SimpleStorageV2.sol          100.00 100.00  -
+solutions/Voting.sol                   100.00 100.00  -
+solutions/AirdropFixed.sol             100.00 100.00  -
+solutions/TokenSaleFixed.sol           100.00 100.00  -
+security/AccessControlExamples.sol     100.00 100.00  -
+patterns/PaymentHub.sol                100.00 100.00  -
+patterns/EscrowFactory.sol             100.00 100.00  -
+patterns/PaymentHubUpgradeable.sol     100.00 100.00  -
+Total                                  100.00 100.00  

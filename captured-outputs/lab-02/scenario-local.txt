@@ -1,0 +1,8 @@
+0. admin registers provider    0x4b3bc9d3ffb785bf1c4ef46eaac5f52409387e04fd9e38fd89a9fe9bfc7e4767
+1. patient grants 30 days      0x788a9258d4888da33e35a467fa50b61e8490b811efcbd16a6ac55a5098bba066
+  hasActiveConsent             true
+2. provider records access     0x1442ccc76f208339e609a57120de96b0d700d6aa6474628db2b3af13f10386be
+3. patient revokes             0xf5a42c3d464cb4985ceaeb2d2c55671d207e05d3bb04e18748c1de826f94a5e6
+  hasActiveConsent             false
+4. provider tries again        refused: NoActiveConsent
+DataAccessed events            1

@@ -1,0 +1,5 @@
+                                 before    after  saved
+debit: repeated vs cached read    28849    28619    0.8%
+record: wide vs packed struct    112938    91089   19.3%
+recordShipment, call 1           477903   120105   74.9%
+recordShipment, call 2           443703   103005   76.8%

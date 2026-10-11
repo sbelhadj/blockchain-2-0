@@ -1,0 +1,6 @@
+Transaction sent: 0x057d78b7ca2b4ae777c0dc17ac5bf3c22a9215613a56c39ac69e738c86e3b6c8
+Mined in block 2
+Gas used: 309463
+Effective gas price: 1.772598634 gwei
+Fee paid: 0.000548553691073542 ETH
+Asset 0: MRI Scanner Lab Demo, owner 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
